@@ -5,10 +5,9 @@ LIRI Bot is like iPhone's SIRI, but instead is a Language Interpretation and Rec
 ### Overview ###
 --------------------------
 LIRI is a command line node app that takes in parameters and gives you back data based off the following parameters:
-
- * concert-this
  * spotify-this-song
  * movie-this
+ * concert-this
  * do-what-it-says
 
  -----
