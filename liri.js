@@ -83,7 +83,7 @@ function getSongs(songName) {
     //Artist(s)
     console.log("Artists: ", data.tracks.items[0].album.artists[0].name)
     // A preview link of the song from Spotify
-    console.log("Preview Link: ", data.tracks.items[0].preview_url)
+    console.log("Preview Link: ", data.tracks.items[0].href)
     // The album that the song is from
     console.log("Album Name: ", data.tracks.items[0].album.name)
   });
