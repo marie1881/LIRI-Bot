@@ -10,7 +10,13 @@ LIRI is a command line node app that takes in parameters and gives you back data
  * concert-this
  * do-what-it-says
 
- -----
+### Files Needed: ###
+•	package.json
+•	.gitignore
+•	keys.js
+•	random.txt
+•	liri.js
+ 
  ### Getting Started:  ###
  ------
  Please look in the "screenshots" folder, to see a demonstration of Liri-Bot.
