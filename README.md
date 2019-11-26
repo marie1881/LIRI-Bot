@@ -39,8 +39,12 @@ NPM Packages:
 
 
  ### Getting Started:  ###
- ------
- Please look in the "screenshots" folder, to see a demonstration of Liri-Bot.
+
+ 1. Node.js - download the latest version of Node (https://nodejs.org/en/).
+
+ 2. Make a new GitHub repository called liri-node-app and clone it to your computer.
+
+ 3. Send requests using the axios package to the Bands in Town, Spotify and OMDB APIs.
 
  ## Spotify-this-song: ##
  This will show the following information about the song in your terminal/bash window
