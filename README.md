@@ -17,7 +17,8 @@ LIRI is a command line node app that takes in parameters and gives you back data
  Please look in the "screenshots" folder, to see a demonstration of Liri-Bot.
 
  ## Spotify-this-song: ##
-![Spotify](./screenshots/spotify.png)
+![Spotify](./screenshots/spotify.PNG)
+
  ## Movie-this: ##
 
  ## Concert-this: ##
