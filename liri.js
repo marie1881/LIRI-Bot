@@ -91,7 +91,7 @@ function getSongs(songName) {
 
 function getMovies(movieName) {
   // var movieName = value;
-  axios.get("http://www.omdbapi.com/?apikey=trilogy&t=" + movieName)
+  axios.get("http://www.omdbapi.com/?apikey=42518777&t=" + movieName)
     .then(function (data) {
       // console.log(data.data); 
       var results = `
