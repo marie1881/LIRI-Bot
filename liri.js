@@ -13,7 +13,7 @@ var spotify = new Spotify({
 var defaultMovie = "Mr. Nobody";
 // var spotify = new Spotify(keys.spotify);
 
-
+// var userSearch = process.argv.slice(3).join(" ");
 
 /**
  * Name of the venue
@@ -25,21 +25,18 @@ var value = process.argv[3];
 
 switch (action) {
   case "concert-this":
-    getBands(value)
+    getBands(value);
     break;
+
   case "spotify-this-song":
-    //If user has not specified a song , use default
-    // if (value === "") {
-    //   value = defaultSong;
-    // }
-    getSongs(value)
+    getSongs(value);
     break;
   case "movie-this":
     //If user has not specified a movie , use default
     if (value == "") {
       value = defaultMovie;
     }
-    getMovies(value)
+    getMovies(value);
     break;
   case "do-what-it-says":
     doWhatItSays()
@@ -48,18 +45,38 @@ switch (action) {
     break;
 }
 function getBands(artist) {
-  // var artist = value;
+  var artist = value;
   axios.get("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp")
     .then(function (response) {
-      console.log("Name of the venue:", response.data[0].venue.name);
-      console.log("Venue location:", response.data[0].venue.city);
+      console.log("========================");
+      console.log("Name of the venue:" + response.data[0].venue.name);
+      console.log("Venue location:" + response.data[0].venue.city);
       var eventDate = moment(response.data[0].datetime).format('MM/DD/YYYY');
-      console.log("Date of the Event:", eventDate);
+      console.log("Date of the Event:" + eventDate);
     })
     .catch(function (error) {
       console.log(error);
     });
+    
 }
+
+// function getBands(artist) {
+
+//   var artist = userSearch;
+//   var bandQueryURL = "https://rest.bandsintown.com/artists/" + userSearch + "/events?app_id=codingbootcamp"
+
+//   axios.get(bandQueryURL).then(
+//     function (response) {
+//       console.log("Name of the venue: " + response.data[0].venue.name);
+//       console.log("Venue Location: " + response.data[0].venue.city);
+//       console.log("Date of Event: " + moment(response.data[0].datetime).format("MM-DD-YYYY") );
+//     var logConcert = "Begin Concert Log Entry" + "\nName if the musician" + artist + "\nName of artist"
+//     fs.appendFile("log.txt", logConcert, function (err) {
+//       if (err) throw err;
+//     })
+//   }
+//   )
+
 
 function getSongs(songName) {
   // var songName = value;
@@ -82,6 +99,8 @@ function getSongs(songName) {
 
     //Artist(s)
     console.log("Artists: ", data.tracks.items[0].album.artists[0].name)
+    // Preview of song name
+    console.log("Song Name: " + data.tracks.items[0].name)
     // A preview link of the song from Spotify
     console.log("Preview Link: ", data.tracks.items[0].href)
     // The album that the song is from
